@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2% 5%;
+  position: fixed;
+  z-index: 10;
+}
+
+.nav__logo {
+  font-family: 'Dancing Script', cursive;
+}
+
+.nav__logo .logo__link {
+  color: #111;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50px;
+}
+
+.nav__list .list__item {
+  -webkit-transition: 0.3s text-shadow, 0.3s -webkit-transform;
+  transition: 0.3s text-shadow, 0.3s -webkit-transform;
+  transition: 0.3s transform, 0.3s text-shadow;
+  transition: 0.3s transform, 0.3s text-shadow, 0.3s -webkit-transform;
+}
+
+.nav__list .list__item .item__link {
+  text-decoration: none;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px 20px;
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+
+.nav__list .list__item .item__link:hover {
+  color: #111;
+}
+
+.nav__list .list__item .item__link--active {
+  color: #111;
+}
+
+.nav__list .list__item:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  text-shadow: -5px 5px 2px #ddd;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container--background {
+  background-image: url(/assets/img/jumbotron.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 5%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.header .header__title::before {
+  position: absolute;
+  content: 'Photo';
+  font-size: 80px;
+  font-weight: 700;
+  color: rgba(100, 100, 100, 0.3);
+  top: -40px;
+  left: -90px;
+}
+
+.header .header__title::after {
+  position: absolute;
+  content: 'graph';
+  font-size: 80px;
+  font-weight: 700;
+  color: rgba(100, 100, 100, 0.3);
+  top: 0;
+  right: -90px;
+  z-index: 0;
+}
+
+.header__paragraph {
+  width: 70%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #222;
+  border-top: 1px solid #666;
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 200px;
+  border: 0px solid #111;
+  border-radius: 5px;
+  background-color: #111;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-transition: 0.3s -webkit-transform, 0.3s -webkit-box-shadow;
+  transition: 0.3s -webkit-transform, 0.3s -webkit-box-shadow;
+  transition: 0.3s transform, 0.3s box-shadow;
+  transition: 0.3s transform, 0.3s box-shadow, 0.3s -webkit-transform, 0.3s -webkit-box-shadow;
+}
+
+.button:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  -webkit-box-shadow: -5px 5px 5px #aaa;
+          box-shadow: -5px 5px 5px #aaa;
+}
+/*# sourceMappingURL=style.css.map */
