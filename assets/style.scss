@@ -67,7 +67,34 @@ body {
         background-image: url(/assets/img/jumbotron.jpg);
         background-position: center;
         background-size: cover;
-        
+    }
+    &__title {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 100px 0 50px 0;
+        position: relative;
+    }
+    &__title::before {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 1px;
+        background-color: #111;
+        top: 50%;
+        left: 50%;
+    }
+    &__title::after {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 1px;
+        background-color: #111;
+        top: 50%;
+        left: 50%;
     }
 }
 .header {
@@ -118,13 +145,70 @@ body {
         margin-bottom: 30px;
     }
 }
+.offer__container {
+    padding: 10% 5%;
+
+    .offer__title::before {
+        transform: translateX(-160%);
+    }
+    .offer__title::after {
+        transform: translateX(60%);
+    }
+    .rows__container {
+        counter-reset: offers;
+    }
+    .offer__row {
+        width: 80%;
+        margin: 100px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .offer__desc {
+            flex: 0 1 45%;
+            text-align: center;
+            position: relative;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+        .offer__desc::before {
+            counter-increment: offers;
+            position: absolute;
+            content: counter(offers);
+            color: rgba(150,150,150,0.2);
+            font-size: 250px;
+            top: 0px;
+            left: 20%;
+            transform: translateY(-30%);
+        }
+        .offer__img {
+            flex:0 1 45%;
+            height: auto;
+            width: 45%;
+            box-shadow: 0 0 10px #aaa;
+        }
+        &:nth-child(odd){
+            flex-direction: row-reverse;
+        }
+
+
+    }
+}
 
 
 .button {
-    width: 200px;
+    width: 250px;
     border: 0px solid #111;
     border-radius: 5px;
-    background-color: #111;
+    background-color: #222;
     padding: 20px 0;
     text-transform: uppercase;
     font-size: 1rem;
