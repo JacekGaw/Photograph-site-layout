@@ -227,6 +227,7 @@ body {
 .offer__container .offer__row .offer__desc p {
   font-size: 1rem;
   font-weight: 300;
+  line-height: 150%;
 }
 
 .offer__container .offer__row .offer__desc::before {
@@ -256,6 +257,34 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.portfolio__container {
+  padding: 0 5%;
+}
+
+.portfolio__container .portfolio__title::before {
+  -webkit-transform: translateX(-190%);
+          transform: translateX(-190%);
+}
+
+.portfolio__container .portfolio__title::after {
+  -webkit-transform: translateX(90%);
+          transform: translateX(90%);
+}
+
+.pricing__container {
+  padding: 5%;
+}
+
+.pricing__container .pricing__title::before {
+  -webkit-transform: translateX(-170%);
+          transform: translateX(-170%);
+}
+
+.pricing__container .pricing__title::after {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
 }
 
 .button {

@@ -177,6 +177,7 @@ body {
             p{
                 font-size: 1rem;
                 font-weight: 300;
+                line-height: 150%;
             }
         }
         .offer__desc::before {
@@ -203,7 +204,31 @@ body {
     }
 }
 
+.portfolio__container {
+    padding: 0 5%;
 
+    .portfolio__title{
+        &::before {
+            transform: translateX(-190%);
+        }
+        &::after {
+            transform: translateX(90%);
+        }
+    }
+}
+
+.pricing__container {
+    padding: 5%;
+
+    .pricing__title {
+        &::before {
+            transform: translateX(-170%);
+        }
+        &::after {
+            transform: translateX(70%);
+        }
+    }
+}
 .button {
     width: 250px;
     border: 0px solid #111;
