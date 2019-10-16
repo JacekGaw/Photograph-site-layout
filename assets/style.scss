@@ -101,7 +101,7 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 0 5%;
-    background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    background-image: linear-gradient(rgba(255,255,255,0) 50%, rgba(255,255,255,1));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,6 +143,7 @@ body {
         border-top: 1px solid #666;
         padding-top: 10px;
         margin-bottom: 30px;
+        font-weight: 700;
     }
 }
 .offer__container {
@@ -219,6 +220,7 @@ body {
 
 .pricing__container {
     padding: 5%;
+    padding-bottom: 10%;
 
     .pricing__title {
         &::before {
@@ -228,7 +230,82 @@ body {
             transform: translateX(70%);
         }
     }
+    .pricing__row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .row__item {
+            border: 5px solid #222;
+            flex: 0 1 30%;
+            margin: 20px;
+
+            .item__header {
+                text-align: center;
+                color: #FAFAFA;
+                background-color: #222;
+                padding: 20px;
+                text-transform: uppercase;
+            }
+
+            .item__desc ul {
+                list-style-type: none;
+                padding: 20px;
+                font-weight: 300;
+
+                li {
+                    line-height: 150%;
+                    padding-left: 15px;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 8px;
+                        height: 1px;
+                        background-color: #222;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            .item__price {
+                text-align: center;
+                font-size: 3rem;
+                padding: 20px 10px;
+                position: relative;
+                font-weight: 700;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 60%;
+                    height: 2px;
+                    background-color: #222;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        .row__item--awarded {
+            transform: scale(1.15);
+            z-index: 5;
+            border-color: #E5AD21;
+            background-color: #fff;
+
+            .item__header {
+                background-color: #E5AD21;
+            }
+        }
+    }
 }
+
+.contact {
+    background-color: #222;
+}
+
 .button {
     width: 250px;
     border: 0px solid #111;
