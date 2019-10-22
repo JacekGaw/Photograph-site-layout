@@ -38,6 +38,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1020px) {
+  .nav {
+    padding: 1% 5%;
+  }
+}
+
 .nav__logo {
   font-family: 'Dancing Script', cursive;
 }
@@ -46,6 +52,12 @@ body {
   color: #111;
   text-decoration: none;
   font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1020px) {
+  .nav__logo .logo__link {
+    font-size: 1.5rem;
+  }
 }
 
 .nav__list {
@@ -81,6 +93,13 @@ body {
   padding: 10px 20px;
   -webkit-transition: 0.3s color;
   transition: 0.3s color;
+}
+
+@media screen and (max-width: 1020px) {
+  .nav__list .list__item .item__link {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
 }
 
 .nav__list .list__item .item__link:hover {
