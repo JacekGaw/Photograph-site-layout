@@ -122,8 +122,8 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 0 5%;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), to(white));
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, white);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0.4)), to(white));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 30%, white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,6 +375,106 @@ body {
 
 .contact {
   background-color: #222;
+}
+
+.contact__form {
+  padding: 5%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form .contact__title::before {
+  -webkit-transform: translateX(-170%);
+          transform: translateX(-170%);
+  background-color: #fff;
+}
+
+.contact__form .contact__title::after {
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+  background-color: #fff;
+}
+
+.contact__form .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__form .form__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  width: 70%;
+  margin: 10px 0;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #222;
+  border: 1px solid #aaa;
+  border-bottom-width: 5px;
+  outline-color: #E5AD21;
+  color: #ddd;
+  -webkit-transition: 0.3s border-bottom-color, 0.3s outline-color;
+  transition: 0.3s border-bottom-color, 0.3s outline-color;
+}
+
+.contact__form .form__item:hover {
+  border-bottom-color: #E5AD21;
+}
+
+.contact__form .form__item:focus {
+  border-bottom-color: #E5AD21;
+}
+
+.contact__form .form__button {
+  width: 150px;
+  background-color: #222;
+  color: #ddd;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #aaa;
+  border-bottom-width: 5px;
+  outline-color: #E5AD21;
+  margin: 20px 0;
+  -webkit-transition: 0.3s border-bottom-color, 0.3s outline-color;
+  transition: 0.3s border-bottom-color, 0.3s outline-color;
+}
+
+.contact__form .form__button:hover {
+  border-bottom-color: #E5AD21;
+}
+
+.contact__form .form__button:focus {
+  border-bottom-color: #E5AD21;
+}
+
+.contact__footer {
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 1rem;
+  background-color: #262626;
+}
+
+.contact__footer a {
+  color: #ff4ef0;
 }
 
 .button {

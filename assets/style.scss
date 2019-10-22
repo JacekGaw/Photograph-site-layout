@@ -101,7 +101,7 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 0 5%;
-    background-image: linear-gradient(rgba(255,255,255,0) 50%, rgba(255,255,255,1));
+    background-image: linear-gradient(rgba(255,255,255,0.4) 30%, rgba(255,255,255,1));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,6 +304,83 @@ body {
 
 .contact {
     background-color: #222;
+
+    &__form {
+        padding: 5%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .contact__title::before {
+            transform: translateX(-170%);
+            background-color: #fff;
+        }
+        .contact__title::after {
+            transform: translateX(70%);
+            background-color: #fff;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__item {
+                flex: 0 1 60%;
+                width: 70%;
+                margin: 10px 0;
+                font-size: 1rem;
+                padding: 10px;
+                font-weight: 700;
+                background-color: #222;
+                border: 1px solid #aaa;
+                border-bottom-width: 5px;
+                outline-color: #E5AD21;
+                color: #ddd;
+                transition: 0.3s border-bottom-color, 0.3s outline-color;
+
+                &:hover {
+                    border-bottom-color: #E5AD21;
+                }
+                &:focus {
+                    border-bottom-color: #E5AD21;
+                }
+            }
+            &__button {
+                width: 150px;
+                background-color: #222;
+                color: #ddd;
+                padding: 10px;
+                font-size: 1.2rem;
+                border: 1px solid #aaa;
+                border-bottom-width: 5px;
+                outline-color: #E5AD21;
+                margin: 20px 0;
+                transition: 0.3s border-bottom-color, 0.3s outline-color;
+
+                &:hover {
+                    border-bottom-color: #E5AD21;
+                }
+                &:focus {
+                    border-bottom-color: #E5AD21;
+                }
+            }
+
+        }
+    }
+
+    &__footer {
+        padding: 20px;
+        text-align: center;
+        color: #ccc;
+        font-size: 1rem;
+        background-color: #262626;
+
+        a {
+            color: rgb(255, 78, 240);
+        }
+    }
 }
 
 .button {
