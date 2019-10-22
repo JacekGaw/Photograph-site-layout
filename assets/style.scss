@@ -15,6 +15,13 @@ body {
     padding: 2% 5%;
     position: fixed;
     z-index: 10;
+    @media screen and (min-width:450px) and (max-width: 720px){
+        display: none;
+    }
+    @media screen and (max-width:450px){
+        justify-content: center;
+        position: absolute;
+    }
     
     &__logo {
         font-family: 'Dancing Script', cursive;
@@ -31,6 +38,9 @@ body {
         display: flex;
         align-items: center;
         margin-left: 50px;
+        @media screen and (max-width:450px){
+            display: none;
+        }
 
         .list__item {
             transition: 0.3s transform, 0.3s text-shadow;
@@ -77,6 +87,10 @@ body {
         font-weight: 700;
         margin: 100px 0 50px 0;
         position: relative;
+        @media screen and (max-width: 1020px){
+            font-size: 2rem;
+        }
+
     }
     &__title::before {
         position: absolute;
@@ -86,6 +100,9 @@ body {
         background-color: #111;
         top: 50%;
         left: 50%;
+        @media screen and (max-width: 1020px){
+            width: 50px;
+        }
     }
     &__title::after {
         position: absolute;
@@ -95,6 +112,9 @@ body {
         background-color: #111;
         top: 50%;
         left: 50%;
+        @media screen and (max-width: 1020px){
+            width: 50px;
+        }
     }
 }
 .header {
@@ -116,12 +136,19 @@ body {
         align-items: center;
         margin-right: 30px;
         padding: 30px 0;
+        @media screen and (max-width: 1020px){
+            flex: 0 1 10%;
+        }
 
         .icon {
             width: 50px;
             height: 50px;
             margin: 10px;
             transition: 0.3s transform;
+            @media screen and (max-width: 1020px){
+                width: 30px;
+                height: 30px;
+            }
 
             &:hover {
                 transform: scale(1.2);
@@ -145,6 +172,13 @@ body {
             position: relative;
             z-index: 2;
             transform: translateX(35%);
+            @media screen and (max-width: 1020px){
+                font-size: 2rem;
+            }
+            @media screen and (max-width: 450px){
+                transform: none;
+                display: none;
+            }
         }
 
         .header__title::before {
@@ -155,6 +189,14 @@ body {
             color: rgba(100,100,100,0.3);
             top: -40px;
             left: -90px;
+            @media screen and (max-width: 1020px){
+                font-size: 40px;
+                top: -20px;
+                left: -50px;
+            }
+            @media screen and (max-width: 450px){
+                display: none;
+            }
         }
         .header__title::after {
             position: absolute;
@@ -165,17 +207,28 @@ body {
             top: 0;
             right: -90px;
             z-index: 0;
+            @media screen and (max-width: 1020px){
+                font-size: 40px;
+                right: -40px;
+                top: 10px;
+            }
+            @media screen and (max-width: 450px){
+                display: none;
+            }
         }
 
         .header__paragraph {
             width: 100%;
-            text-align: center;
+            text-align: left;
             font-size: 1.2rem;
             color: #222;
             border-top: 1px solid #666;
             padding-top: 10px;
             margin-bottom: 30px;
             font-weight: 300;
+            @media screen and (max-width: 1020px){
+                font-size: 0.8rem;
+            }
         }
     }
 }
@@ -184,9 +237,15 @@ body {
 
     .offer__title::before {
         transform: translateX(-160%);
+        @media screen and (max-width: 1020px){
+            transform: translateX(-220%);
+        }
     }
     .offer__title::after {
         transform: translateX(60%);
+        @media screen and (max-width: 1020px){
+            transform: translateX(120%);
+        }
     }
     .rows__container {
         counter-reset: offers;
@@ -197,21 +256,33 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 600px){
+            flex-direction: column;
+        }
 
         .offer__desc {
             flex: 0 1 45%;
             text-align: center;
             position: relative;
+            @media screen and (max-width: 600px){
+                text-align: right;
+            }
 
             h3 {
                 font-size: 1.5rem;
                 font-weight: 400;
                 margin-bottom: 20px;
+                @media screen and (max-width: 1020px){
+                    font-size: 1.2rem;
+                }
             }
             p{
                 font-size: 1rem;
                 font-weight: 300;
                 line-height: 150%;
+                @media screen and (max-width: 1020px){
+                    font-size: 0.8rem;
+                }
             }
         }
         .offer__desc::before {
@@ -223,15 +294,30 @@ body {
             top: 0px;
             left: 20%;
             transform: translateY(-30%);
+            @media screen and (max-width: 1020px){
+                font-size: 150px;
+                top: 20px;
+            }
         }
         .offer__img {
             flex:0 1 45%;
             height: auto;
             width: 45%;
             box-shadow: 0 0 10px #aaa;
+            @media screen and (max-width: 600px){
+                display: none;
+            }
         }
         &:nth-child(odd){
             flex-direction: row-reverse;
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+            }
+            .offer__desc {
+                @media screen and (max-width: 600px){
+                    text-align: left;
+                }
+            }
         }
 
 
@@ -244,9 +330,15 @@ body {
     .portfolio__title{
         &::before {
             transform: translateX(-190%);
+            @media screen and (max-width: 1020px){
+                transform: translateX(-300%);
+            }
         }
         &::after {
             transform: translateX(90%);
+            @media screen and (max-width: 1020px){
+                transform: translateX(200%);
+            }
         }
     }
 }
@@ -258,21 +350,36 @@ body {
     .pricing__title {
         &::before {
             transform: translateX(-170%);
+            @media screen and (max-width: 1020px){
+                transform: translateX(-260%);
+            }
         }
         &::after {
             transform: translateX(70%);
+            @media screen and (max-width: 1020px){
+                transform: translateX(160%);
+            }
         }
     }
     .pricing__row {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+        @media screen and (max-width: 770px){
+            flex-direction: column;
+            align-items: center;
+        }
 
         .row__item {
             border: 5px solid #222;
             flex: 0 1 30%;
             margin: 20px;
+            @media screen and (max-width: 770px){
+                flex: none;
+                width: 80%;
+            }
+            
+            
 
             .item__header {
                 text-align: center;
@@ -280,6 +387,9 @@ body {
                 background-color: #222;
                 padding: 20px;
                 text-transform: uppercase;
+                @media screen and (max-width: 1020px){
+                    font-size: 1rem;
+                }
             }
 
             .item__desc ul {
@@ -291,6 +401,9 @@ body {
                     line-height: 150%;
                     padding-left: 15px;
                     position: relative;
+                    @media screen and (max-width: 1020px){
+                        font-size: 0.8rem;
+                    }
                     &::before {
                         position: absolute;
                         content: '';
@@ -309,6 +422,9 @@ body {
                 padding: 20px 10px;
                 position: relative;
                 font-weight: 700;
+                @media screen and (max-width: 1020px){
+                    font-size: 1.5rem;
+                }
 
                 &::before {
                     position: absolute;
@@ -348,10 +464,16 @@ body {
         .contact__title::before {
             transform: translateX(-170%);
             background-color: #fff;
+            @media screen and (max-width: 1020px){
+                transform: translateX(-260%);
+            }
         }
         .contact__title::after {
             transform: translateX(70%);
             background-color: #fff;
+            @media screen and (max-width: 1020px){
+                transform: translateX(160%);
+            }
         }
         
         .form {
@@ -428,6 +550,10 @@ body {
     color: #222;
     cursor: pointer;
     transition: 0.3s border-bottom, 0.3s border-top;
+    @media screen and (max-width: 1020px){
+        width: 150px;
+        font-size: 0.8rem;
+    }
 
     &:hover {
         border-bottom: 2px solid #111;

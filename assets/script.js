@@ -1,7 +1,7 @@
 const macyContainer = new Macy({
     container: '.macy__container',
     mobileFirst: true,
-    columns: 1,
+    columns: 2,
     breakAt: {
         400: 2,
         700: 3,
