@@ -18,8 +18,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 2% 5%;
+  padding: 1% 5%;
   position: fixed;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
   z-index: 10;
 }
 
@@ -116,6 +120,14 @@ body {
   text-shadow: -5px 5px 2px #ddd;
 }
 
+.nav--scroll {
+  padding: 1% 5%;
+  position: fixed;
+  background-color: #fff;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -180,8 +192,8 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 0 5%;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(255, 255, 255, 0.4)), to(white));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 30%, white);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255, 255, 255, 0.3)), to(white));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3) 80%, white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,6 +204,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  scroll-behavior: smooth;
 }
 
 .header .icons__container {

@@ -12,3 +12,8 @@ const macyContainer = new Macy({
         y: 20
     }
 });
+
+// const nav = document.querySelector('.nav');
+// window.addEventListener('scroll', () => {
+//     (window.scrollY > 0) ? nav.classList.add('nav--scroll');
+// });

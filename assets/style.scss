@@ -12,8 +12,10 @@ body {
 .nav {
     width: 100%;
     display: flex;
-    padding: 2% 5%;
+    padding: 1% 5%;
     position: fixed;
+    justify-content: space-between;
+    background-color: #fff;
     z-index: 10;
     @media screen and (min-width:450px) and (max-width: 720px){
         display: none;
@@ -79,6 +81,12 @@ body {
         }
     }
 }
+.nav--scroll {
+    padding: 1% 5%;
+    position: fixed;
+    background-color: #fff;
+    transition: 0.3s background-color;
+}
 .container {
     width: 100%;
     min-height: 100vh;
@@ -131,10 +139,11 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: 0 5%;
-    background-image: linear-gradient(rgba(255,255,255,0.4) 30%, rgba(255,255,255,1));
+    background-image: linear-gradient(rgba(255,255,255,0.3) 80%, rgba(255,255,255,1));
     display: flex;
     flex-direction: row;
     align-items: center;
+    scroll-behavior: smooth;
 
     .icons__container {
         flex: 0 1 20%;
