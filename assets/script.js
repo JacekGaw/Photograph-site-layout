@@ -13,6 +13,10 @@ const macyContainer = new Macy({
     }
 });
 
+const scrollNav = new SmoothScroll('a[class*="item__link"]');
+const scrollLogo = new SmoothScroll('a[href*="#header"]');
+
+
 // const nav = document.querySelector('.nav');
 // window.addEventListener('scroll', () => {
 //     (window.scrollY > 0) ? nav.classList.add('nav--scroll');
